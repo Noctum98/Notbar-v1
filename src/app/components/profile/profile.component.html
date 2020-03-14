@@ -1,0 +1,28 @@
+<div class="container" *ngIf="user">
+    <div id="profile-data">
+        <h2>Datos</h2>
+        <ul *ngIf="user">
+            <li><img src="{{url + '/api/get-image/' + user.image}}" alt="Imagen de Perfil"></li>
+            <li><strong>Nombre:</strong> {{user.name}} {{user.last_name}} </li>
+            <li><strong>Email:</strong> {{user.email}} </li>
+            <li><strong>Nacionalidad:</strong> {{user.nationality}}</li>
+        </ul>
+    </div>
+    <div id="profile-articles">
+        <h2>{{title}}</h2>
+        <a [routerLink]="['/create']" *ngIf="payload && payload._id == user._id">+ Agregar articulo</a>
+        <div *ngFor="let article of articles" id="profile_content">
+            <div *ngIf="article.autor_username == user.name_user" id="box">
+                <div class="profile_img"><img src="{{url_articles + 'get-image/' + article.image}}" alt=""></div>
+                <div class="profile_title">
+                    <h3>{{article.title}}</h3>
+                    <span style="display: block;color: blue;margin-top: 5px;">{{article.category}}</span>
+                    <button class="delete" (click)="borrar(article._id)" *ngIf="payload && payload._id == user._id">Eliminar Articulo</button>
+                    <button class="edit" (click)="editar(article._id)" *ngIf="payload && payload._id == user._id">Editar Artiulo</button>
+                    <button class="view" (click)="viewArticle(article.title)">Ver Articulo</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

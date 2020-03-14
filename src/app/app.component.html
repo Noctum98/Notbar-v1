@@ -1,0 +1,35 @@
+<header>
+  <input type="checkbox" id="btn-menu">
+  <label for="btn-menu" class="icon-th-list"></label>
+  <div id="logov2"><h2>NotbatV1</h2></div>
+  <div id="menu">
+  <div id="logo"><h1 (click)="redirigir()">NotbarV1</h1></div>
+  <ul >
+    <li><a [routerLink]="['/notices']" [routerLinkActive]="['active']" >Inicio</a></li>
+    <li><a [routerLink]="['/entertainment']" [routerLinkActive]="['active']">Entretenimiento</a></li>
+    <li><a [routerLink]="['/world']" [routerLinkActive]="['active']" >Mundo</a></li>
+    <li><a [routerLink]="['/sports']" [routerLinkActive]="['active']" >Deportes</a></li>
+    <li><a [routerLink]="['/economy']" [routerLinkActive]="['active']" >Economia</a></li>
+    <li><a [routerLink]="['/politics']" [routerLinkActive]="['active']" >Politica</a></li>
+  </ul>
+  </div>
+  <span class="access_span" *ngIf="!payload"><a [routerLink]="['/login']">Acceder a cuenta</a></span>
+  <div class="login-span" *ngIf="payload">  
+      <ul>
+        <li>
+          <a [routerLink]="['/profile']" class="span-profile"><img src="{{url + 'get-image/' + payload.image}}" alt=""></a>
+          <ul class="submenu">
+            <li><a [routerLink]="['/profile']">Ver Perfil</a></li>
+            <li><a href="" (click)="logout()">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+      </ul>  
+  </div>
+</header>
+<div class="clearfix"></div>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+<footer>
+  <span>Desarrollador Web Ezequiel Lucero &copy;</span>
+</footer>

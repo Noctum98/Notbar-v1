@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Ultimos Articulos</h2>
+    <div id="container-articles">
+        <div id="articles" *ngFor="let article of articles" (click)="redirigir(article.title)">
+            <img src="{{url + 'get-image/' + article.image}}" alt="">
+            <span id="category">{{article.category}}</span>
+            <h3>{{article.title}}</h3>
+            <span id="autor">Escrito por: {{article.autor}}</span>
+        </div>
+    </div>
+</div>

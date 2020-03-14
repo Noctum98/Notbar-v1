@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>{{category}}</h2>
+    <div id="container-articles">
+        <div *ngFor="let article of articles" (click)="redirigir(article.title)">
+            <div id="articles" *ngIf="article.category == category">
+                <img src="{{url + 'get-image/' + article.image}}" alt="">
+                <span id="category">{{article.category}}</span>
+                <h3>{{article.title}}</h3>
+                <span id="autor">Escrito por: {{article.autor}}</span>
+            </div>
+        </div>
+    </div>
+</div>

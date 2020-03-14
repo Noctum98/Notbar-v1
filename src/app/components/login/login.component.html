@@ -1,0 +1,22 @@
+<div class="container" *ngIf="users">
+    <div id="login">
+        <h2>Iniciar Sesion</h2>
+        <span class="error" *ngIf="!succes">Los datos ingresados no son correctos verifique el correo o la contraseña</span>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" autocomplete="off">
+            <label for="name_user">Nombre de Usuario</label>
+            <input type="text" id="name_user"  name="name_user" #name_user="ngModel" [(ngModel)]="user.name_user" required>
+            <span class="login_error" *ngIf="name_user.touched && !name_user.valid">
+                *El nombre de Usuario debe introducirse
+            </span>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" #password="ngModel" [(ngModel)]="user.password" required>
+            <span class="login_error" *ngIf="password.touched && !password.valid">
+                *La contraseña debe introducirse 
+            </span>
+
+            <input type="submit" value="Iniciar Sesion" [disabled]="!loginForm.form.valid">
+        </form>
+        <span class="register">¿No tienes cuenta? <a [routerLink]="['/register']">Registrate</a></span>
+    </div>    
+</div>

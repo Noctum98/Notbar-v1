@@ -1,0 +1,30 @@
+<div class="container" *ngIf="article">
+    <h2>{{titulo}}</h2>
+    <span class="success" *ngIf="status == 'success'">El Articulo se ha creado correctamente pude verlo <a [routerLink]="['/profile']">aquí</a></span>
+    <span class="error" *ngIf="status == 'failed'">Ha ocurrido un error al crear el articulo</span>
+    <div id="create">
+        <form #articleForm="ngForm" (ngSubmit)="onSubmit(articleForm)" autocomplete="off">
+            <label for="title">Título del Articulo</label>
+            <input type="text" id="title" name="title" #title="ngModel" [(ngModel)]="article.title" maxlength="65" required>
+            <label for="subtitle">Subtítulo</label>
+            <input type="text" id="subtitle" name="subtitle" #subtitle="ngModel" [(ngModel)]="article.subtitle" required>
+
+            <label for="category">Categoría</label>
+            <select name="select" [(ngModel)]="article.category">
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Mundo">Mundo</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Politica">Politica</option>
+                <option value="Economía">Economía</option>
+            </select>
+
+            <label for="image">Portada del Articulo</label>
+            <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)" required>
+
+            <label for="content">Contenido</label>
+            <textarea name="content" id="contenido" cols="30" rows="10" #content="ngModel" [(ngModel)]="article.content"></textarea>
+            <input type="submit" value="Subir Articulo" [disabled]="!articleForm.form.valid">
+        </form>
+    </div>
+
+</div>

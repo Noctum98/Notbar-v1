@@ -1,0 +1,417 @@
+@media (max-width:1366px){
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    @font-face {
+        font-family: "Titilium";
+        src: url("fonts/titilium.ttf");
+    }
+    pre{
+        white-space:pre-wrap;
+        font-family: "Titilium";
+    }
+    .pre{
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+    body{
+        overflow-x:hidden;
+    }
+    .clearfix{
+        float: none;
+        clear: both;
+    }
+    header{
+        display:block;
+        width: 100%;
+        background-color:rgba(2, 48, 115, 0.8);
+        padding-top:5px;
+        padding-bottom: 5px;
+        font-family: "Titilium",Arial, Helvetica, sans-serif;
+        color:white;
+        position: fixed;
+    }
+    #btn-menu{
+        display: none;
+    }
+    #logo{
+        display: none;
+    }
+    header #logov2{
+        display: block;
+        float: right;
+        width: 59.0%;
+        font-size: 1.5em;
+    }
+    #logov2 h2{
+        margin-left: 20px;
+    }
+    header label{
+        display: block;
+        width: 20%;
+        float: left;
+        cursor: pointer;
+        font-size: 35px;
+    }
+    #menu{
+        width: 100%;
+        position: absolute;
+        background-color: rgba(2, 48, 115, 0.8);
+        top:62.5px;
+        left:0px;
+        transform: translateX(-200%);
+        transition: all 0.2s;
+    }
+    #menu ul{
+       display: block;
+    }
+    #menu ul li{
+        color: white;
+    }
+    header ul li a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    header ul li a:hover{
+        background-color:rgba(2, 48, 115, 1);
+    }
+    .login-span ul ul{
+        display: block;
+    }
+    .login-span{
+        width: 100%;
+        position: absolute;
+        top:326px;
+        left: 0;
+        background-color: rgba(2, 48, 115, 0.8);
+        border-top: 1px solid #CCC;
+        transform: translateX(-200%);
+        transition: all 0.2s;
+    }
+    .access_span{
+        width: 100%;
+        position: absolute;
+        top:326px;
+        left: 0;
+        background-color: rgba(2, 48, 115, 0.8);
+        transform: translateX(-200%);
+        transition: all 0.2s;
+        border-top: 1px solid #CCC;
+    }
+    .access_span a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    .access_span a:hover{
+        background-color:rgba(2, 48, 115, 1);
+    }
+    #btn-menu:checked ~ #menu{
+        transform: translateY(0%); 
+        display: block; 
+    }
+    #btn-menu:checked ~ .login-span{
+        transform: translateY(0%); 
+    }
+    #btn-menu:checked ~ .access_span{
+        transform: translateY(0%); 
+    }
+    .span-profile{
+        width: 100%;
+    }
+    .span-profile img{
+        width: 100px;
+        border-radius: 100%;
+        border: 5px solid rgba(20, 20, 20, 0.7);
+        box-shadow: 0px 0px 10px black;
+    }
+
+    /* Contenido */
+    .container{
+        display:block;
+        width: 100%;
+        margin-left: 15px;
+        padding-top: 80px;
+        font-family: "Titilium";
+        min-height: 380px;
+    
+    }
+    .container h2{
+        text-align: center;
+    }
+    /* Noticias */
+    #articles{
+        display: block;
+        width: 80%;
+        height: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 0px auto;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    #articles img{
+        width: 100%;
+        border-bottom: 1px solid #333;
+    }
+
+    #articles h3{
+        width: 100%;
+        font-size: auto;
+        margin: 0px auto;
+        text-align: center;
+    }
+    #articles:hover{
+        border: 1px solid black;
+    }
+    #category{
+        display: block;
+        text-align: center;
+        color:rgb(5, 66, 158); 
+    }
+    #autor{
+        display: block;
+        text-align: center;
+    }
+    /* Noticia */
+    #article span{
+        display: block;
+        color: gray;
+        font-size: 14px;
+    }
+    #article span a{
+        color: gray;
+        text-decoration: none;
+    }
+    #article span a:hover{
+        text-decoration: underline;
+    }
+    #article img{
+        width: 80%;
+        margin-top: 15px;
+    }
+    #article .article_content{
+        width: 100%;
+        margin-top: 10px;
+        text-align: justify;
+    }
+    /* Login */
+    #login{
+        display: block;
+        width: 80%;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px black;
+        background-color: rgb(240, 240, 240);
+        margin: 0px auto;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    #login label{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #login input{
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        padding: 5px;
+        
+    }
+    #login input[type="submit"]{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border:none;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        background-color:rgba(2, 48, 115, 0.8); 
+    }
+    #login input[disabled]{
+        background-color: rgba(1, 38, 94, 0.5);
+    }
+    #login h2{
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    #login .register{
+        display: block;
+        text-align: center;
+        margin-top: 15x;
+    }
+    .login_error{
+        display: block;
+        text-align: center;
+        color: red;
+        font-size: 14px;
+    }
+    .error{
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        padding: 5px;
+        background-color: red;
+    }
+    /* Perfil */
+    #profile-articles a{
+        display: block;
+        width: 30%;
+        margin-top: 5px;
+        text-decoration: none;
+        color: white;
+        background: rgba(2, 48, 115, 0.8);
+        padding: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #profile-data h2{
+        text-align: left;
+    }
+    #profile-data{
+        display: block;
+        width: 36%;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin: 0px auto;
+    }
+    #profile-data img{
+        width:80%;
+        border:1px solid black;
+        border-radius: 10px;
+    }
+    #profile-data li{
+        padding-top: 8px;
+        list-style: none;
+    }
+    #profile-articles img{
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 10px;
+
+    }
+    #profile-articles{
+        display: block;
+        width: 36%;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        margin: 0px auto;
+    }
+    button{
+        display: inline-flex;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid black;
+        margin-right: 5px;
+        margin-top: 10px;
+        color: white;
+    }
+    .delete{
+        background-color:rgba(250, 19, 11,0.9);
+    }
+    .edit{
+        background-color: #333333;
+    }
+    .view{
+        background-color: green;
+    }
+    /*Create*/
+    #create{
+        display: block;
+        width: 40%;
+        margin-top: 20px;
+    }
+    #create label{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 3px;
+    }
+    #create input{
+        width: 100%;
+        padding: 5px;
+    }
+    #create textarea{
+        display: block;
+        width: 200%;
+        padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: black;
+    }
+    #create select{
+        display: block;
+        padding: 5px;
+    }
+    #create input[type="submit"]{
+        width: 40%;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background: rgba(2, 48, 115, 0.8); 
+    }
+    /*Registrar*/
+    #register{
+        display: block;
+        width: 40%;
+        margin-top: 15px;
+    }
+    #register label{
+        display: block;
+        margin-top: 10px;
+    }
+    #register input{
+        width: 100%;
+        padding: 5px;
+    }
+    #register input[type="submit"]{
+        width: 30%;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background: rgba(2, 48, 115, 0.8); 
+    }
+    #register .login_error{
+        text-align: left;
+    }
+    #register input[disabled]{
+        background-color: rgba(1, 38, 94, 0.5);
+    }
+    .success{
+        display: block;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: green;
+        color: white;
+    }
+    .success a{
+        color: white;
+    }
+    /* Footer */
+    footer{
+        font-family: Helvetica, Arial;
+        color:white;
+        height: 47px;
+        background: rgba(51, 51, 51, 0.60);
+        margin:0px auto;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 10px;
+        line-height: 47px;
+    }
+}

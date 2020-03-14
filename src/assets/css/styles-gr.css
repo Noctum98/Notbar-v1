@@ -1,0 +1,490 @@
+@media (min-width:1367px){
+    @font-face {
+        font-family: "Titilium";
+        src: url("fonts/titilium.ttf");
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        overflow-x:hidden;
+    }
+    .clearfix{
+        float: none;
+        clear: both;
+    }
+    /* Cabecera */
+    .active{
+        border-bottom:2px solid rgba(221, 221, 221, 0.877);
+    }
+    header{
+        display:block;
+        width: 100%;
+        height: 63px;
+        background-color:rgba(2, 48, 115, 0.8);
+        font-family: "Titilium",Arial, Helvetica, sans-serif;
+        color:white;
+        position: fixed;
+    }
+    #menu{
+        display: block;
+        width: 82%;
+        float: left;
+    }
+    #logo{
+        display: block;
+        float: left;
+        width: 21%;
+    }
+    h1{
+        padding-left: 20px;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+    #menu ul{
+        display: block;
+        width: 79%;
+        float: right;
+        line-height: 60px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    header li{
+        list-style: none;
+        display: inline-block;
+        margin: 0px auto;
+       
+    }
+    header #menu li a{
+        text-decoration: none;
+        color:white;
+        margin-right: 1px;
+        margin-left: 1px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 14px;
+        transition: 300ms;
+        padding-top: 12px;
+        border-bottom:3px solid rgba(255, 255, 255, 0.0);
+    }
+    header #menu a:hover{
+        border-bottom:2px solid rgba(221, 221, 221, 0.877);
+    }
+    header label{
+        font-size: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    header h2{
+        display: none;
+    }
+    #btn-menu{
+        display: none;
+    }
+    .login-span{
+        display: block;
+        float: right;
+        margin-right: 57px;
+        margin-top: 10px;
+    }
+    .login-span .span-profile{
+        text-align: center;
+        margin: 0px auto;
+        text-decoration: none;
+        color:white;
+        transition: 300ms;
+        cursor: pointer;
+    }
+    .logout{
+        display: block;
+        text-align: center;
+    }
+    .login-span img{
+        display: block;
+        margin-bottom: 11px;
+        margin-right: 10px;
+        width: 43px;
+        height: 30px;
+        border-radius: 100%;
+        border: 5px solid rgba(20, 20, 20, 0.7);
+        transition: 500ms;
+        box-shadow: 0px 0px 10px black;
+    }
+    .login-span img:hover{
+        border: 5px solid rgba(20, 20, 20, 0.4);
+    }
+    .login-span ul{
+        display: flex;
+        margin-top: 1px;
+    }
+    .login-span ul ul{
+        display: none;
+    }
+    .login-span .submenu a{
+        display: block;
+        text-align: justify;
+        width: 102px;
+        padding:10px;
+        color:white;
+        text-decoration: none;
+        background-color:rgba(2, 48, 115, 0.8);
+    }
+    .login-span .submenu a:hover{
+        text-decoration: underline;
+    }
+    .login-span ul li:hover ul{
+        display: block;
+        margin-left: -28px;
+        position: absolute;
+    }
+    .access_span{
+        line-height: 60px;
+        display: block;
+        float: right;
+        margin-right: 57px;
+    }
+    .access_span a{
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: 300ms;
+        border-bottom:2px solid rgba(221, 221, 221, 0.0);
+    }
+    .access_span a:hover{
+        border-bottom:2px solid rgba(221, 221, 221, 0.877);
+    }
+
+    /* Contenido */
+    #content{
+        display: block;
+        width: 60%;
+        background-color: white;
+        padding-top: 80px;
+        padding-left: 30px;
+        padding-right: 30px;  
+        min-height: 800px;
+        margin: 0px auto;
+        margin-bottom: 20px;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        box-shadow: 0px 0px 30px #ccc;
+
+    }
+    pre{
+        white-space:pre-wrap;
+        font-family: "Titilium";
+    }
+    .pre{
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+    p{
+        width: inherit;
+    }
+    .container{
+        padding: 50px;
+        padding-top: 20px;
+        font-family: "Titilium";
+    }
+    .container h2{
+        font-size: 2em;
+        padding-bottom: 10px;
+        border-bottom:2px solid #ccc;
+    }
+    /* Login */
+    .container #login{
+        display: block;
+        width: 60%;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 10px black;
+        background-color: rgb(240, 240, 240);
+        margin: 0px auto;
+        margin-top: 90px;
+        padding: 20px;
+    }
+    #login label{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #login input{
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        padding: 5px;
+        
+    }
+    #login input[type="submit"]{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border:none;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        background-color:rgba(2, 48, 115, 0.8); 
+    }
+    #login input[disabled]{
+        background-color: rgba(1, 38, 94, 0.5);
+    }
+    #login h2{
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    #login .register{
+        display: block;
+        text-align: center;
+        margin-top: 15x;
+    }
+    .login_error{
+        display: block;
+        text-align: center;
+        color: red;
+        font-size: 14px;
+    }
+    .error{
+        display: block;
+        text-align: center;
+        margin: 0px auto;
+        padding: 5px;
+        background-color: red;
+    }
+    /* Perfil */
+    #profile-articles{
+        display: block;
+        width: 60%;
+        float: left;
+    }
+    #profile-articles a{
+        display: block;
+        width: 30%;
+        margin-top: 5px;
+        text-decoration: none;
+        color: white;
+        background: rgba(2, 48, 115, 0.8);
+        padding: 5px;
+        text-align: center;
+    }
+    #profile_content{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #profile-articles img{
+        width: 100%;
+        height: 150px;
+    }
+    .profile_title{
+        display: block;
+        width: 54%;
+        float: right;
+        margin-right: 20px;
+    }
+    .profile_title h3{
+        font-size: 17px;
+        text-align: justify;
+    }
+    .profile_img{
+        display: flex;
+        width: 40%;
+        border: 1px solid #333333;
+        float: left;
+    }
+    #profile-data{
+        display: block;
+        width: 39%;
+        float: right;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ccc;
+    }
+    #profile-data img{
+        width:60%;
+        border:1px solid black;
+        border-radius: 10px;
+    }
+    #profile-data li{
+        padding-top: 8px;
+        list-style: none;
+    }
+    button{
+        display: inline-flex;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid black;
+        margin-right: 5px;
+        margin-top: 10px;
+        color: white;
+    }
+    .logout{
+        background:rgba(1, 38, 94, 0.8);
+    }
+    .delete{
+        background-color:rgba(250, 19, 11,0.9);
+    }
+    .edit{
+        background-color: #333333;
+    }
+    .view{
+        background-color: green;
+    }
+    /* Registrar */
+    #register{
+        display: block;
+        width: 40%;
+        margin-top: 15px;
+    }
+    #register label{
+        display: block;
+        margin-top: 10px;
+    }
+    #register input{
+        width: 100%;
+        padding: 5px;
+    }
+    #register input[type="submit"]{
+        width: 30%;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background: rgba(2, 48, 115, 0.8); 
+    }
+    #register .login_error{
+        text-align: left;
+    }
+    #register input[disabled]{
+        background-color: rgba(1, 38, 94, 0.5);
+    }
+    .success{
+        display: block;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: green;
+        color: white;
+    }
+    .success a{
+        color: white;
+    }
+    /* Crear Articulo */
+    #create{
+        display: block;
+        width: 40%;
+        margin-top: 20px;
+    }
+    #create label{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 3px;
+    }
+    #create input{
+        width: 100%;
+        padding: 5px;
+    }
+    #create textarea{
+        display: block;
+        width: 250%;
+        padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: black;
+    }
+    #create select{
+        display: block;
+        padding: 5px;
+    }
+    #create input[type="submit"]{
+        width: 40%;
+        padding: 10px;
+        margin-top: 10px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background: rgba(2, 48, 115, 0.8); 
+    }
+    #create input[disabled]{
+        background-color: rgba(1, 38, 94, 0.5);
+    }
+    /* Articulos -- Notices */
+    #container-articles{
+        width: 100%;
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-left: 45px;
+    }
+    #articles{
+        display: inline-block;
+        width: 41%;
+        height: 380px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin-right: 25px;
+        margin-left: 23px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        transition: 300ms;
+    }
+
+    #articles img{
+        width: 100%;
+        height: 250px;
+        border-bottom: 1px solid #333;
+    }
+    #articles h3{
+        width: 100%;
+        font-size: auto;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    #articles:hover{
+        border: 1px solid black;
+    }
+    #category{
+        display: block;
+        text-align: center;
+        color:rgb(5, 66, 158); 
+    }
+    #autor{
+        display: block;
+        text-align: center;
+    }
+    /* Nocticia */
+    #article span{
+        display: block;
+        color: gray;
+        font-size: 14px;
+    }
+    #article span a{
+        color: gray;
+        text-decoration: none;
+    }
+    #article span a:hover{
+        text-decoration: underline;
+    }
+    #article img{
+        width: 80%;
+        margin-top: 15px;
+    }
+    #article .article_content{
+        margin-top: 10px;
+        text-align: justify;
+    }
+    footer{
+        font-family: Helvetica, Arial;
+        color:white;
+        height: 47px;
+        background: rgba(51, 51, 51, 0.60);
+        margin:0px auto;
+        width: 60%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        line-height: 47px;
+    }
+
+}

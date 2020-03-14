@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Crear Usuario</h2>
+    <span  class="success" *ngIf="status == 'success'">
+        El usuario fue creado con exito inicia sesión <a [routerLink]="['/login']" >aquí</a>
+    </span>
+    <div id="register">
+    <form #registerForm="ngForm"  (ngSubmit)="setUser(registerForm)" autocomplete="off">
+        <label for="name_user">Nombre de Usuario</label>
+        <input type="text" id="name_user" #name_user="ngModel" [(ngModel)]="user.name_user" name="name_user" required>
+        <span *ngIf="name_user.touched && !name_user.valid" class="login_error">
+            *Debe introducirse un nombre de usuario
+        </span>
+
+        <label for="name">Nombre</label>
+        <input type="text" id="name" #name="ngModel" [(ngModel)]="user.name" name="name" required>
+        <span *ngIf="name.touched && !name.valid" class="login_error">
+            *Debe introducir su nombre
+        </span>
+
+        <label for="last_name">Apellido</label>
+        <input type="text" id="last_name" #last_name="ngModel" [(ngModel)]="user.last_name" name="last_name" required>
+        <span *ngIf="last_name.touched && !last_name.valid" class="login_error">
+            *Debe introducir su apellido
+        </span>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" #password="ngModel" [(ngModel)]="user.password" name="password" required>
+        <span *ngIf="password.touched && !password.valid" class="login_error">
+            *Debe introducir una contraseña valida
+        </span>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" #email="ngModel" [(ngModel)]="user.email" name="email" required email>
+        <span *ngIf="email.touched && email.errors?.required" class="login_error">
+            *Debe introducir un email
+        </span>
+        <span *ngIf="email.touched && email.errors?.email" class="login_error">
+            *El email es invalido
+        </span>
+
+        <label for="nationality">Nacionalidad</label>
+        <input type="text" id="nationality" #nationality="ngModel" [(ngModel)]="user.nationality" name="nationality" required>
+        <span *ngIf="nationality.touched && !nationality.valid" class="login_error">
+            *Debe introducir su nacionalidad
+        </span>
+        <label for="image">Añadir imagen de Perfil</label>
+        <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)">
+        <span  *ngIf="user.image" style="float:none;">
+            <img src="{{url+'get-image/'+user.image}}" style="width:100px;"/>
+        </span><br/>
+        <input type="submit" value="Añadir Usuario" [disabled]="!registerForm.form.valid">
+    </form>
+    </div>
+</div>

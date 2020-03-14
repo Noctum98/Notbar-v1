@@ -1,0 +1,10 @@
+<div class="container" *ngIf="article">
+    <div id="article">
+        <h2>{{article.title}}</h2>
+        <span>Escrito por: <a [routerLink]="['/profile-user/',article.autor_username]" >{{article.autor}}</a></span>
+        <span>Fecha: {{article.date}}</span>
+        <img src="{{url + 'get-image/' + article.image }}" alt="">
+        <h3>{{article.subtitle}}</h3>
+        <pre class="article_content">{{article.content}}</pre>
+    </div>
+</div>
